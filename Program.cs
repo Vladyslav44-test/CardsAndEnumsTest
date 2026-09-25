@@ -6,9 +6,11 @@ namespace CardsAndEnumsTest
 {
     internal class Program
     {
+        private static Random random = new Random();
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello C# 14.0 and higher!");
+            Card card = new Card((Values)random.Next(1, 14), (Suits)random.Next(4));
+            Console.WriteLine(card.Name);
         }
     }
 }
